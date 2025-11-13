@@ -18,9 +18,21 @@ function primitiveMultiply(a, b) {
 
 function reliableMultiply(a, b) {
   // Your code here.
+  let itWorked = false;
+  let attempts = 0;
   do{
-    primitiveMultiply(a,b);
-  } while (primitiveMultiply(a,b) != MultiplicatorUnitFailure)
-  
+    try {
+      return primitiveMultiply(a,b);
+    } catch (error) {
+      if (error instanceof MultiplicatorUnitFailure) {
+        itWorked = false;
+      } else {
+        itWorked = true;
+      }
+      attempts++;
+    }
+  } while (!itWorked);
+
 }
-primitiveMultiply(5,10);
+console.log(reliableMultiply(5,10));
+console.log(attempts);
