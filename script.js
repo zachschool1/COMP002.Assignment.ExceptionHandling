@@ -16,20 +16,21 @@ function primitiveMultiply(a, b) {
   }
 }
 
+let attempts = 1;
 function reliableMultiply(a, b) {
   // Your code here.
   let itWorked = false;
-  let attempts = 0;
+
   do{
     try {
       return primitiveMultiply(a,b);
     } catch (error) {
       if (error instanceof MultiplicatorUnitFailure) {
+        attempts++;
         itWorked = false;
       } else {
         itWorked = true;
       }
-      attempts++;
     }
   } while (!itWorked);
 
