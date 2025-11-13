@@ -18,4 +18,9 @@ function primitiveMultiply(a, b) {
 
 function reliableMultiply(a, b) {
   // Your code here.
+  do{
+    primitiveMultiply(a,b);
+  } while (primitiveMultiply(a,b) != MultiplicatorUnitFailure)
+  
 }
+primitiveMultiply(5,10);
