@@ -1,2 +1,3 @@
 # COMP002.Assignment.ExceptionHandling
-Week 5 Assignment #1: Exception Handling
+Author:Zachary Jordan
+Purpose: Week 5 Assignment #1: Exception Handling
